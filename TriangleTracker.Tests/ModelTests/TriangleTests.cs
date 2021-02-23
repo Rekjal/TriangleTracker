@@ -31,6 +31,14 @@ namespace TriangleTracker.Tests
       Assert.AreEqual(false, testTriangle2.IsTriangle());
     }
 
+    [TestMethod]
+    public void IsTriangle_ReturnsStringWhencheckType_Equilatertal_Triangle()
+    {
+      Triangle testTriangle4 = new Triangle(2,2,2);
+      Assert.AreEqual("Equilatertal Triangle", testTriangle4.checkType(2, 2, 2));
+    }
+
+
   }
 }
 
