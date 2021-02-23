@@ -38,6 +38,20 @@ namespace TriangleTracker.Tests
       Assert.AreEqual("Equilatertal Triangle", testTriangle4.checkType(2, 2, 2));
     }
 
+    [TestMethod]
+    public void IsTriangle_ReturnsStringWhencheckType_Isosceles_Triangle()
+    {
+      Triangle testTriangle5 = new Triangle(2,2,2);
+      Assert.AreEqual("Isosceles Triangle", testTriangle5.checkType(2, 2, 3));
+    }
+
+   [TestMethod]
+    public void IsTriangle_ReturnsStringWhencheckType_Scalene_Triangle()
+    {
+      Triangle testTriangle5 = new Triangle(2,3,4);
+      Assert.AreEqual("Scalene Triangle", testTriangle5.checkType(2, 3, 4));
+    }
+
 
   }
 }
