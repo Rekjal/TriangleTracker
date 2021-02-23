@@ -1,3 +1,5 @@
+using System;
+
 namespace TriangleTracker
 {
   public class Triangle
@@ -14,16 +16,26 @@ namespace TriangleTracker
     }
     public bool IsTriangle()
     {
-      if ((Side1 + Side2 > Side3) || (Side2 + Side3 > Side1) || (Side1 + Side3 > Side2))
+      if ((Side1 + Side2 > Side3) && (Side2 + Side3 > Side1) && (Side1 + Side3 > Side2))
       {
-      return false;
+        // Console.WriteLine(Side1 + " " +Side2 + " " +Side3);
+        return true;
       }
     else
-      return true;
+      return false;
     }
+
     public string checkType()
     {
-      return "triangle time";
+      if ((Side1 == Side2) && (Side2 == Side3) && (Side1 == Side3)) {
+        return "Equilatertal Triangle";
+      }
+      else if ((Side1 == Side2) || (Side2 == Side3) || (Side1 == Side3)) {
+        return "Isosceles Triangle";
+      }
+      else {
+        return "Scalene Triangle";
+      }
     }
   }
 }
