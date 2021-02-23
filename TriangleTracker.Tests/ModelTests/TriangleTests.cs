@@ -23,6 +23,14 @@ namespace TriangleTracker.Tests
       Triangle testTriangle = new Triangle(2,3,2);
       Assert.AreEqual(true, testTriangle.IsTriangle());
     }
+
+    [TestMethod]
+    public void IsTriangle_ReturnsFalseWhenAnySumOfTwoSidesIsGreaterThanThird_False()
+    {
+      Triangle testTriangle2 = new Triangle(2,3,8);
+      Assert.AreEqual(false, testTriangle2.IsTriangle());
+    }
+
   }
 }
 
